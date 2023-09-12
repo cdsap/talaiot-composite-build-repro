@@ -8,6 +8,8 @@ buildscript {
 
     dependencies {
         classpath("io.github.cdsap.talaiot:talaiot:1.0")
+        classpath("io.github.cdsap.talaiot.plugin:base-plugin:1.0")
+        classpath("io.github.cdsap.talaiot.plugin:talaiot-standard:1.0")
     }
 }
 
