@@ -1,3 +1,5 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
 pluginManagement {
     repositories {
         google()
@@ -5,12 +7,23 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+plugins {
+    id "com.gradle.enterprise" version "3.5.2"
+    id 'com.gradle.common-custom-user-data-gradle-plugin' version '1.8.1'
+}
+
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://plugins.gradle.org/m2/")
+        }
     }
 }
 rootProject.name = "Talaiot Composite Build"
 include ':app'
+
+includeBuild("../Talaiot") // Update to your relative path to Talaiot
