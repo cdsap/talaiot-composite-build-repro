@@ -1,6 +1,7 @@
 import org.gradle.api.initialization.resolve.RepositoriesMode
 
 pluginManagement {
+    includeBuild("../Talaiot")
     repositories {
         google()
         mavenCentral()
@@ -17,5 +18,3 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Talaiot Composite Build"
 include ':app'
-
-includeBuild("../Talaiot") // Update to your relative path to Talaiot
