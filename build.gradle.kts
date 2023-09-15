@@ -15,6 +15,6 @@ plugins {
     id ("io.github.cdsap.talaiot")
 }
 
-configure<TalaiotPluginExtension>() {
+configure<TalaiotPluginExtension> {
 
 }
